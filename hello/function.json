@@ -1,0 +1,16 @@
+{
+  "scriptFile" : "../walkthrough-1.0-SNAPSHOT.jar",
+  "entryPoint" : "com.microsoft.azure.functions.Http.hello",
+  "bindings" : [ {
+    "type" : "httpTrigger",
+    "name" : "req",
+    "direction" : "in",
+    "authLevel" : "anonymous",
+    "methods" : [ "post" ]
+  }, {
+    "type" : "http",
+    "name" : "$return",
+    "direction" : "out"
+  } ],
+  "disabled" : false
+}

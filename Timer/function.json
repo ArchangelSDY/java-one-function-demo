@@ -1,0 +1,17 @@
+{
+  "scriptFile" : "../walkthrough-1.0-SNAPSHOT.jar",
+  "entryPoint" : "com.microsoft.azure.functions.Timer.functionHandler",
+  "bindings" : [ {
+    "type" : "timerTrigger",
+    "name" : "timerInfo",
+    "direction" : "in",
+    "schedule" : "*/30 * * * * *"
+  }, {
+    "type" : "queue",
+    "name" : "$return",
+    "direction" : "out",
+    "connection" : "AzureWebJobsStorage",
+    "queueName" : "walkthrough"
+  } ],
+  "disabled" : false
+}

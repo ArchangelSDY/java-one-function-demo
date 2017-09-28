@@ -1,0 +1,12 @@
+{
+  "scriptFile" : "../walkthrough-1.0-SNAPSHOT.jar",
+  "entryPoint" : "com.microsoft.azure.functions.Queue.functionHandler",
+  "bindings" : [ {
+    "type" : "queueTrigger",
+    "name" : "myQueueItem",
+    "direction" : "in",
+    "connection" : "AzureWebJobsStorage",
+    "queueName" : "walkthrough"
+  } ],
+  "disabled" : false
+}
